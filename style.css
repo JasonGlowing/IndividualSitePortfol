@@ -1,0 +1,68 @@
+/* ===== СБРОС СТИЛЕЙ ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== ОСНОВНЫЕ НАСТРОЙКИ ===== */
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: black;
+    color: white;
+    line-height: 1.5;
+}
+
+/* ===== HEADER ===== */
+header {
+    background-color: white;
+    color: black;
+    padding: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.Username {
+    color: blueviolet;
+    font-size: 128px;
+}
+
+/* ===== ОСНОВНОЙ КОНТЕНТ ===== */
+main {
+
+}
+
+h2, h3 {
+
+}
+
+section p {
+
+}
+
+/* ===== НАВИГАЦИЯ ===== */
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    margin-bottom: 8px;
+}
+
+nav a {
+    color: blueviolet;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: white;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+    color: gray;
+}
