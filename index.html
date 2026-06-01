@@ -7,30 +7,44 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <script src="script.js"></script>
+        <!-- КНОПКА МЕНЮ -->
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+        <!-- СКРЫВАЕМАЯ ПАНЕЛЬ -->
+        <div class="sidebar" id="sidebar">
+            <a href="#home">Главная</a>
+            <a href="#skills">Галерея</a>
+            <a href="#hobby">Хобби</a>
+            <a href="#Campudahter">Мой пк</a>
+        </div>
         <header>
             <h1 class="Username">J'Son</h1>
-            <h2>Прогер, музыкант</h2>
+            <span id="typed"></span>
         </header>
 
         <main>
-            <h3>Навигация сайта:</h3>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Главная</a></li>
-                    <li><a href="#">Навыки</a></li>
-                    <li><a href="#">Хобби</a></li>
-                    <li><a href="gallery.html">Галерея работ</a></li>
-                </ul>
-            </nav>
-
-            <section>
-                <h2>О чём этот сайт?</h2>
+            <section id="home" class="page">
+                <h2>О чём этот сайт?-</h2>
                 <p>Через этот сайт хотел рассказать о себе, своих хобби и навыках как в программировании, так и в том, о чём расскажу позже.</p>
             </section>
         </main>
-
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+        <script>
+            var typed = new Typed('#typed', {
+                strings: ['Прогер', 'Музыкант', 'Пригожин Вагнер (мой одногруппник не хочет чтобы я это удалял)', 'Халяль'],
+                typeSpeed: 50,
+                backSpeed: 40,
+                loop: true
+            });
+        </script>
+    </body>
         <footer>
             <p>Цветков Дмитрий. Работа 1-го курса для колледжа IT.Москва 2026</p>
-        </footer>
-    </body>
+</footer>
+        <script>
+        function toggleMenu() {
+            document.getElementById("sidebar").classList.toggle("active");
+        }
+        </script>
 </html>
