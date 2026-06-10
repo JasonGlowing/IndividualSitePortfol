@@ -32,6 +32,18 @@ header {
 }
 
 /* ===== Слайдер ===== */
+.slider {
+    position: relative;
+    max-width: 500px;
+    margin: 30px auto;
+
+    border-radius: 12px;
+    overflow: hidden;
+
+    background: #09041a;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+}
+
 .slide {
     position: absolute;
     top: 0;
