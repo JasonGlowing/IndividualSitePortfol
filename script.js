@@ -12,22 +12,11 @@ let typed = new Typed('#typed', {
     loop: true
 });
 
-function toggleMenu() {
-    document.getElementById("sidebar").classList.toggle("active");
-}
 
 function toggleContacts() {
     document
         .getElementById("contactsPanel")
         .classList.toggle("active");
-}
-
-function scrollToSection(id) {
-    document.getElementById(id).scrollIntoView({
-        behavior: "smooth"
-    });
-
-    document.getElementById("sidebar").classList.remove("active");
 }
 
 let currentSlide = 0;
