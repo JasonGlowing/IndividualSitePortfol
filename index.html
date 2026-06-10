@@ -16,6 +16,8 @@
         <div class="sidebar" id="sidebar">
             <a href="#home">Главная</a>
             <a href="#aboutme">Обо мне</a>
+            <a href="#hobby">Хобби</a>
+            <a href="#skills">Навыки</a>
             <a href="#Campudahter">Мой пк</a>
         </div>
         <header>
@@ -24,6 +26,16 @@
         </header>
 
         <main>
+            <p class="slider-description">
+                Некоторые из моих творческих работ и постеров.
+            </p>
+            <div class="slider">
+                <img class="slide active" src="galleryimages/firstimage.jpg" alt="Goose Lenin">
+                <img class="slide" src="galleryimages/secondimage.jpg" alt="Жестокость // Кульминация">
+
+                <button class="slider-btn prev" onclick="changeSlide(-1)">❮</button>
+                <button class="slider-btn next" onclick="changeSlide(1)">❯</button>
+            </div>
             <section id="home" class="page">
                 <h2>О чём этот сайт?</h2>
                 <p>
@@ -33,11 +45,60 @@
             </section>
             <section id="aboutme" class="page">
                 <h2>Обо мне</h2>
-                <p>Привет! Меня зовут Дмитрий Цветков, также известный под псевдонимом J'Son. Я начинающий разработчик, увлекающийся программированием, созданием веб-сайтов и цифровым творчеством.</p>
+                <p>Привет! Меня зовут J'Son. Я начинающий разработчик, увлекающийся программированием, созданием веб-сайтов и цифровым творчеством.</p>
                 <p>Мне нравится изучать новые технологии, экспериментировать с различными проектами и постоянно совершенствовать свои навыки. Помимо программирования, я интересуюсь музыкой, видеоиграми и 3D-графикой.</p>
                 <p>Среди моих работ можно увидеть как веб-проекты, так и творческие работы, вдохновлённые играми и современной интернет-культурой. Этот сайт служит моим личным портфолио и местом, где я делюсь своими достижениями и опытом.</p>
             </section>
+
+            <section id="hobby" class="page">
+                <h2>Хобби</h2>
+
+                <p>
+                    В свободное время я увлекаюсь музыкой, видеоиграми и цифровым творчеством.
+                    Мне нравится пробовать себя в разных направлениях, создавать что-то своё
+                    и постепенно развивать навыки.
+                </p>
+
+                <p>
+                    Особенно мне интересны ретро-шутеры, платформеры и игры с необычной атмосферой.
+                    Также я люблю музыку и иногда работаю над собственными идеями, связанными
+                    со звуком и творческими проектами.
+                </p>
+
+                <p>
+                    Для меня хобби — это не просто отдых, а способ вдохновляться, получать новый опыт
+                    и находить идеи для будущих проектов.
+                </p>
             </section>
+
+            <section id="skills" class="page">
+                <h2>Навыки</h2>
+
+                <div class="skills-grid">
+
+                    <div class="skill-card">
+                        <i class="fa-brands fa-html5"></i>
+                        <h3>HTML5</h3>
+                    </div>
+
+                    <div class="skill-card">
+                        <i class="fa-brands fa-css3-alt"></i>
+                        <h3>CSS3</h3>
+                    </div>
+
+                    <div class="skill-card">
+                        <i class="fa-brands fa-js"></i>
+                        <h3>JavaScript</h3>
+                    </div>
+
+                    <div class="skill-card">
+                        <i class="fa-brands fa-python"></i>
+                        <h3>Python</h3>
+                    </div>
+
+                </div>
+            </section>
+                        
             <section id="Campudahter" class="page">
                 <h2>Мой ПК</h2>
 

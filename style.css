@@ -6,50 +6,117 @@
 }
 
 /* ===== ОСНОВНЫЕ НАСТРОЙКИ ===== */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: rgb(36, 34, 34);
+    background: linear-gradient(135deg, rgb(25, 25, 25), rgb(40, 30, 60));
     color: white;
     line-height: 1.5;
 }
 
+/* ===== HEADER ===== */
+header {
+    background-color: white;
+    color: black;
+    padding: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.Username {
+    color: blueviolet;
+    font-size: 128px;
+}
+
+/* ===== Слайдер ===== */
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    opacity: 0;
+    transform: translateX(30px);
+
+    transition:
+        opacity 0.5s ease,
+        transform 0.5s ease;
+}
+
+.slide.active {
+    opacity: 1;
+    transform: translateX(0);
+    position: relative;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    background: rgba(0, 0, 0, 0.65);
+    color: white;
+
+    border: none;
+    border-radius: 50%;
+
+    width: 42px;
+    height: 42px;
+
+    font-size: 24px;
+    cursor: pointer;
+
+    z-index: 10;
+}
+
+.prev {
+    left: 12px;
+}
+
+.next {
+    right: 12px;
+}
+
+.slider-btn:hover {
+    background: blueviolet;
+}
 /* ===== КНОПКА МЕНЮ ===== */
 .menu-btn {
     position: fixed;
     top: 20px;
     left: 20px;
+    z-index: 1001;
 
     background: blueviolet;
     color: white;
 
     border: none;
+    border-radius: 8px;
+
     padding: 12px 16px;
 
     font-size: 24px;
     cursor: pointer;
-
-    border-radius: 8px;
-
-    z-index: 1001;
 }
 
 /* ===== SIDEBAR ===== */
 .sidebar {
     position: fixed;
-
-    left: -250px;
     top: 0;
+    left: -250px;
+    z-index: 1000;
 
     width: 250px;
     height: 100%;
 
     background: #2c2c2c;
-
     padding-top: 100px;
 
     transition: 0.3s ease;
-
-    z-index: 1000;
 }
 
 .sidebar.active {
@@ -73,20 +140,6 @@ body {
     background: blueviolet;
 }
 
-/* ===== HEADER ===== */
-header {
-    background-color: white;
-    color: black;
-    padding: 40px;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.Username {
-    color: blueviolet;
-    font-size: 128px;
-}
-
 /* ===== ОСНОВНОЙ КОНТЕНТ ===== */
 main {
     width: 90%;
@@ -94,23 +147,24 @@ main {
     margin: 0 auto;
 }
 
-h2, h3 {
-    margin-bottom: 12px;
-}
-
 section {
-    margin-top: 25px;
+    margin-top: 10px;
 }
 
 section p {
     margin-bottom: 20px;
 }
 
-/* ===== АНИМАЦИЯ ПЕРЕЛИСТЫВАНИЯ ===== */
+h2,
+h3 {
+    margin-bottom: 12px;
+}
+
+/* ===== СЕКЦИИ СТРАНИЦЫ ===== */
 .page {
     animation: slide 0.5s ease;
-    min-height: 100vh;
-    padding-top: 100px;
+    min-height: auto;
+    padding: 30px 0;
 }
 
 @keyframes slide {
@@ -134,41 +188,67 @@ section p {
 
 .gallery-card {
     background-color: #09041a;
+
     border: 1px solid #333;
     border-radius: 12px;
+
     padding: 15px;
+
     text-align: center;
 }
 
 .gallery-card img {
     width: 100%;
+
     border-radius: 8px;
     margin-bottom: 12px;
 }
 
 .mentiontext {
-    color:gray
-}
-
-/* ===== FOOTER ===== */
-footer {
-    padding: 15px;
-    text-align: center;
-    font-size: 14px;
     color: gray;
 }
 
-html {
-    scroll-behavior: smooth;
+/* ===== НАВЫКИ ===== */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+
+    margin-top: 20px;
 }
 
-/* Кнопка контактов */
+.skill-card {
+    background: #09041a;
+
+    border: 1px solid #333;
+    border-radius: 12px;
+
+    padding: 20px;
+
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    border-color: blueviolet;
+}
+
+.skill-card i {
+    color: blueviolet;
+
+    font-size: 48px;
+
+    margin-bottom: 15px;
+}
+
+/* ===== КОНТАКТЫ ===== */
 .contacts-btn {
     position: fixed;
     left: 20px;
     bottom: 20px;
-
-    padding: 12px 20px;
+    z-index: 1001;
 
     background: blueviolet;
     color: white;
@@ -176,17 +256,19 @@ html {
     border: none;
     border-radius: 8px;
 
-    cursor: pointer;
-    font-size: 16px;
+    padding: 12px 20px;
 
-    z-index: 1001;
+    font-size: 16px;
+    cursor: pointer;
 }
 
-/* Панель контактов */
 .contacts-panel {
     position: fixed;
     left: 20px;
     bottom: 80px;
+    z-index: 1000;
+
+    display: none;
 
     width: fit-content;
 
@@ -195,11 +277,7 @@ html {
     border-radius: 12px;
     padding: 15px;
 
-    display: none;
-
-    z-index: 1000;
-
-    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
 .contacts-panel.active {
@@ -210,8 +288,11 @@ html {
     margin-bottom: 10px;
 }
 
-.contacts-panel a {
-    display: block;
+.contacts-panel a,
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 
     color: white;
     text-decoration: none;
@@ -220,10 +301,44 @@ html {
     padding: 8px;
 
     border-radius: 6px;
+}
 
+.contacts-panel a {
     transition: 0.2s;
 }
 
 .contacts-panel a:hover {
     background: blueviolet;
+}
+
+.contacts-panel i {
+    width: 24px;
+
+    font-size: 20px;
+    text-align: center;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    padding: 15px;
+
+    color: gray;
+
+    text-align: center;
+    font-size: 14px;
+}
+
+/* ===== АДАПТАЦИЯ ПОД ТЕЛЕФОН ===== */
+@media (max-width: 768px) {
+    .Username {
+        font-size: 64px;
+    }
+
+    .sidebar {
+        width: 220px;
+    }
+
+    .contacts-panel {
+        width: 280px;
+    }
 }
