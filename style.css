@@ -170,6 +170,25 @@ h3 {
     }
 }
 
+.menu-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+
+    background: blueviolet;
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    padding: 12px 16px;
+
+    font-size: 24px;
+    cursor: pointer;
+
+    z-index: 1001;
+}
+
 /* ===== ГАЛЕРЕЯ ===== */
 .gallery {
     display: grid;
