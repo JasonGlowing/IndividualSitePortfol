@@ -5,6 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Сайт-портфолио</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     </head>
     <body>
         <!-- КНОПКА МЕНЮ -->
@@ -14,7 +16,6 @@
         <div class="sidebar" id="sidebar">
             <a href="#home">Главная</a>
             <a href="#aboutme">Обо мне</a>
-            <a href="#hobby">Хобби</a>
             <a href="#Campudahter">Мой пк</a>
         </div>
         <header>
@@ -25,29 +26,60 @@
         <main>
             <section id="home" class="page">
                 <h2>О чём этот сайт?</h2>
-                <p>Через этот сайт хотел рассказать о себе, своих хобби и навыках как в программировании, так и в том, о чём расскажу позже.</p>
+                <p>
+                    Через этот сайт я хотел рассказать о себе, своих хобби,
+                    навыках и проектах.
+                </p>
             </section>
-                <section id="aboutme" class="page">
+            <section id="aboutme" class="page">
                 <h2>Обо мне</h2>
-                <p>
-                    Привет! Меня зовут Дмитрий Цветков, также известный под псевдонимом J'Son.
-                </p>
+                <p>Привет! Меня зовут Дмитрий Цветков, также известный под псевдонимом J'Son. Я начинающий разработчик, увлекающийся программированием, созданием веб-сайтов и цифровым творчеством.</p>
+                <p>Мне нравится изучать новые технологии, экспериментировать с различными проектами и постоянно совершенствовать свои навыки. Помимо программирования, я интересуюсь музыкой, видеоиграми и 3D-графикой.</p>
+                <p>Среди моих работ можно увидеть как веб-проекты, так и творческие работы, вдохновлённые играми и современной интернет-культурой. Этот сайт служит моим личным портфолио и местом, где я делюсь своими достижениями и опытом.</p>
+            </section>
+            </section>
+            <section id="Campudahter" class="page">
+                <h2>Мой ПК</h2>
 
                 <p>
-                    Я начинающий программист и музыкант, который постоянно изучает новые технологии
-                    и развивает свои навыки в создании программ и цифровых проектов.
+                    Компьютер используется для программирования, работы с графикой,
+                    игр и создания различных цифровых проектов.
                 </p>
 
+                <ul>
+                    <li><strong>Процессор:</strong> AMD Ryzen 7 5800X (8 ядер, 16 потоков)</li>
+                    <li><strong>Видеокарта:</strong> NVIDIA GeForce RTX 3060</li>
+                    <li><strong>Материнская плата:</strong> GIGABYTE B550 AORUS ELITE AX V2</li>
+                    <li><strong>Оперативная память:</strong> Patriot Viper Steel DDR4 — 32 ГБ (2×16 ГБ)</li>
+                </ul>                
                 <p>
-                    В свободное время люблю играть в видеоигры, особенно в жанре ретро-шутеров
-                    и приключенческих платформеров. Среди моих любимых игр — серия Rayman.
-                </p>
-
-                <p>
-                    Этот сайт создан как небольшое портфолио, где я рассказываю о своих
-                    увлечениях, навыках и проектах.
+                    Конфигурация позволяет комфортно заниматься веб-разработкой,
+                    работать с современным программным обеспечением и запускать
+                    большинство современных игр на высоких настройках графики.
                 </p>
             </section>
+            <!-- Кнопка контактов -->
+            <button class="contacts-btn" onclick="toggleContacts()">
+                Контакты
+            </button>
+
+            <!-- Окно контактов -->
+            <div class="contacts-panel" id="contactsPanel">
+                <h3>Мои контакты</h3>
+
+                <a href="https://vk.com/ТВОЙ_VK" target="_blank">
+                    <i class="fa-brands fa-vk"></i> VK
+                </a>
+
+                <a href="https://github.com/ТВОЙ_GITHUB" target="_blank">
+                    <i class="fa-brands fa-github"></i> GitHub
+                </a>
+
+                <div class="contact-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    glowingjason1567@yahoo.com
+                </div>
+            </div>
         </main>
         <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
         <script src="script.js"></script>

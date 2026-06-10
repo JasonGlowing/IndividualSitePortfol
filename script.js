@@ -15,3 +15,9 @@ let typed = new Typed('#typed', {
 function toggleMenu() {
     document.getElementById("sidebar").classList.toggle("active");
 }
+
+function toggleContacts() {
+    document
+        .getElementById("contactsPanel")
+        .classList.toggle("active");
+}
