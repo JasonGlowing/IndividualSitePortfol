@@ -7,14 +7,13 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <script src="script.js"></script>
         <!-- КНОПКА МЕНЮ -->
         <button class="menu-btn" onclick="toggleMenu()">☰</button>
 
         <!-- СКРЫВАЕМАЯ ПАНЕЛЬ -->
         <div class="sidebar" id="sidebar">
             <a href="#home">Главная</a>
-            <a href="#skills">Галерея</a>
+            <a href="#aboutme">Обо мне</a>
             <a href="#hobby">Хобби</a>
             <a href="#Campudahter">Мой пк</a>
         </div>
@@ -25,26 +24,35 @@
 
         <main>
             <section id="home" class="page">
-                <h2>О чём этот сайт?-</h2>
+                <h2>О чём этот сайт?</h2>
                 <p>Через этот сайт хотел рассказать о себе, своих хобби и навыках как в программировании, так и в том, о чём расскажу позже.</p>
             </section>
+                <section id="aboutme" class="page">
+                <h2>Обо мне</h2>
+                <p>
+                    Привет! Меня зовут Дмитрий Цветков, также известный под псевдонимом J'Son.
+                </p>
+
+                <p>
+                    Я начинающий программист и музыкант, который постоянно изучает новые технологии
+                    и развивает свои навыки в создании программ и цифровых проектов.
+                </p>
+
+                <p>
+                    В свободное время люблю играть в видеоигры, особенно в жанре ретро-шутеров
+                    и приключенческих платформеров. Среди моих любимых игр — серия Rayman.
+                </p>
+
+                <p>
+                    Этот сайт создан как небольшое портфолио, где я рассказываю о своих
+                    увлечениях, навыках и проектах.
+                </p>
+            </section>
         </main>
-        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-        <script>
-            var typed = new Typed('#typed', {
-                strings: ['Прогер', 'Музыкант', 'Пригожин Вагнер (мой одногруппник не хочет чтобы я это удалял)', 'Халяль'],
-                typeSpeed: 50,
-                backSpeed: 40,
-                loop: true
-            });
-        </script>
+        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+        <script src="script.js"></script>
     </body>
         <footer>
             <p>Цветков Дмитрий. Работа 1-го курса для колледжа IT.Москва 2026</p>
 </footer>
-        <script>
-        function toggleMenu() {
-            document.getElementById("sidebar").classList.toggle("active");
-        }
-        </script>
 </html>
